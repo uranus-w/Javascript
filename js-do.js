@@ -316,7 +316,7 @@ var jsDo = {
     //["test1", "test2", "aaa"]  //数组元素的值全等于'test'才被删除
     removeArrayForValue: function (arr, val, type) {
         arr.filter(function (item) {
-            return type === '%' ? item.indexOf(val) !== -1 : item !== val
+            return type === '%' ? item.indexOf(val) == -1 : item !== val
         })
     },
     /*对象及其他*/
